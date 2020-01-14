@@ -18,6 +18,15 @@ class Scraper
     binding.pry 
   end 
   
+  def ge_courses 
+    self.get_pages.css(".post")
+  end 
+  
+  def make_courses
+    self.ge_courses.each do 
+      |post|
+      
+  
   def print_courses
     self.make_courses
     Course.all.each do |course|
